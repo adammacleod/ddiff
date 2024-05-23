@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: netflix_titles
+    description: "https://www.kaggle.com/datasets/rahulvyasm/netflix-movies-and-tv-shows"
+    columns:
+      - name: show_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null

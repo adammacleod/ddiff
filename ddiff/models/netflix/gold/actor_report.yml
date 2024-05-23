@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: actor_report
+    description: "A report for actors"
+
+    columns:
+      - name: actor
+        description: "The name of the actor"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: count_shows
+        description: "The number of shows this actor was in"
+        data_test:
+          - not_null
+
+      - name: count_movies
+        description: "The number of movies this actor was in"
+        data_test:
+          - not_null
+
+      - name: count_distinct_countries
+        description: "The number of countries this actor has performed in"
+        data_test:
+          - not_null

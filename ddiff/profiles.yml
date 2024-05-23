@@ -1,0 +1,6 @@
+ddiff:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../db/ddiff.duckdb'

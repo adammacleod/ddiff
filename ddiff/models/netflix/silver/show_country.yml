@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: show_country
+    description: "A mapping of shows to countries"
+    tests:
+      - dbt_expectations.expect_compound_columns_to_be_unique:
+          column_list: ["show_id", "country"]
+
+    columns:
+      - name: show_id
+        description: "The id of the show"
+        data_tests:
+          - not_null
+
+      - name: country
+        description: "The country which this role was in"
+        data_test:
+          - not_null

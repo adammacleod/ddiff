@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: actor
+    description: "Actors"
+    
+    columns:
+      - name: actor
+        description: "The name of the actor"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: number_of_roles
+        description: "The number of roles which this actor has stared in"
+        data_test:
+          - not_null

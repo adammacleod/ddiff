@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: actor_show
+    description: "A mapping of actors to shows"
+
+    # tests:
+    #   - dbt_expectations.expect_compound_columns_to_be_unique:
+    #       column_list: ["actor", "show_id"]
+
+    columns:
+      - name: actor
+        description: "The name of the actor"
+        data_tests:
+          - not_null
+
+      - name: show_id
+        description: "The show which this actor played in"
+        data_test:
+          - not_null
